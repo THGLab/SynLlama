@@ -1,0 +1,80 @@
+base_model: meta-llama/Llama-3.2-1B-Instruct
+model_type: LlamaForCausalLM
+tokenizer_type: AutoTokenizer
+is_llama_derived_model: true
+
+load_in_8bit: true
+load_in_4bit: false
+strict: false
+
+datasets:
+  - path: CHANGE_TO_YOUR_DATASET_PATH (prepared dataset path in jsonl format)
+    ds_type: json
+    type: alpaca
+dataset_prepared_path: CHANGE_TO_YOUR_DATASET_PATH (file path to save the prepared dataset)
+val_set_size: 0.05
+output_dir: CHANGE_TO_YOUR_OUTPUT_PATH (file path to save the outputs)
+
+sequence_len: 2048
+sample_packing: true
+eval_sample_packing: true
+pad_to_sequence_len: true
+
+overrides_of_model_config:
+  rope_scaling:
+      factor: 1.0
+      low_freq_factor: 1.0
+      high_freq_factor: 4.0
+      original_max_position_embeddings: 8192
+      rope_type: llama3
+
+adapter: lora
+lora_model_dir:
+lora_r: 32
+lora_alpha: 16
+lora_dropout: 0.05
+lora_target_linear: true
+lora_fan_in_fan_out:
+
+wandb_mode:
+wandb_project:
+wandb_entity:
+wandb_run_id:
+wandb_watch:
+wandb_log_model:
+wandb_name:
+
+gradient_accumulation_steps: 4
+micro_batch_size: 4
+num_epochs: 1
+optimizer: adamw_bnb_8bit
+lr_scheduler: cosine
+learning_rate: 0.0002
+
+train_on_inputs: false
+group_by_length: false
+bf16: auto
+fp16:
+tf32: false
+
+gradient_checkpointing: true
+early_stopping_patience:
+resume_from_checkpoint:
+local_rank:
+logging_steps: 1
+xformers_attention:
+flash_attention: true
+s2_attention:
+
+warmup_steps: 10
+evals_per_epoch: 4
+eval_table_size:
+eval_table_max_new_tokens: 128
+saves_per_epoch: 1
+debug:
+deepspeed:
+weight_decay: 0.0
+fsdp:
+fsdp_config:
+special_tokens:
+    pad_token: <|finetune_right_pad_id|>
