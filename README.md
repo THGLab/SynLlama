@@ -30,6 +30,9 @@ If you are interested in retraining the model, please refer to the [Retraining G
 ## 📄 License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
+## 🙏 Acknowledgments
+This project is built on top of the [ChemProjector Repo](https://github.com/luost26/ChemProjector). We thank the authors for building such a user-friendly github!
+
 ## 📝 Citation
 If you use this code in your research, please cite:
 
