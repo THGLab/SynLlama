@@ -38,14 +38,22 @@ This project is built on top of the [ChemProjector Repo](https://github.com/luos
 If you use this code in your research, please cite:
 
 ```bibtex
-@misc{sun_synllama_2025,
-    title = {SynLlama: Generating Synthesizable Molecules and Their Analogs with Large Language Models},  
-    url = {http://arxiv.org/abs/2503.12602},
-    doi = {10.48550/arXiv.2503.12602},
-    publisher = {arXiv},
-    author = {Sun, Kunyang and Bagni, Dorian and Cavanagh, Joseph M. and Wang, Yingze and Sawyer, Jacob M. and Gritsevskiy, Andrew and Head-Gordon, Teresa},
-    month = mar,
-    year = {2025}
+@article{sun_synllama_2025,
+	title = {{SynLlama}: {Generating} {Synthesizable} {Molecules} and {Their} {Analogs} with {Large} {Language} {Models}},
+	volume = {11},
+	copyright = {https://creativecommons.org/licenses/by/4.0/},
+	issn = {2374-7943, 2374-7951},
+	shorttitle = {{SynLlama}},
+	url = {https://pubs.acs.org/doi/10.1021/acscentsci.5c01285},
+	doi = {10.1021/acscentsci.5c01285},
+	language = {en},
+	number = {11},
+	urldate = {2026-04-11},
+	journal = {ACS Central Science},
+	author = {Sun, Kunyang and Bagni, Dorian and Cavanagh, Joseph M. and Wang, Yingze and Sawyer, Jacob M. and Zhou, Bo and Gritsevskiy, Andrew and Zhang, Oufan and Head-Gordon, Teresa},
+	month = nov,
+	year = {2025},
+	pages = {2108--2120},
 }
 ```
 
